@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,600;0,900;1,100;1,600;1,900&display=swap');
+
+body {
+    font-family: montserrat, arial, verdana;
+    background-color: #fbffe3;
+    font-size: 14px;
+}
+
+input, textarea {
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: #493736;
+}
+
+main {
+    background-color: #493736;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.page-heading {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 600;
+    color: #fbffe3;
+}
+
+section.health-card-section {
+    background-color: #b9d7d9;
+    border-radius: 50px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+section.health-card-section .heading {
+    text-align: center;
+    padding: 10px;
+}
+
+section.health-card-section .heading label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #493736;
+}
+
+section.health-card-section .details  {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #fff;
+    column-gap: 20px;
+}
+
+section.health-card-section .details  .patient-details {
+    font-size: 18px;
+}
+
+section.health-card-section .details .patient-details table th {
+    font-weight: 600;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+section.health-card-section .details .patient-details table td {
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+section.health-card-section .details .qr-image img {
+    width: 150px;
+}
+
+section.health-card-section .details  .patient-image img {
+    width: 150px;
+    border-radius: 5px;
+}
+
+section.all-details {
+    background-color: #b9d7d9;
+    padding: 20px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+section.all-details .tab-container {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+section.all-details .tab-container .tab-headers {
+    border-bottom: 1px solid #e09d9d;
+}
+
+section.all-details .tab-container .tab-btn {
+    background-color: transparent;
+    color: #493736;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    padding-bottom: 10px;
+    margin-right: 40px;
+}
+
+section.all-details .tab-container .tab-btn.active {
+    border-bottom: 4px solid #493736;
+    border-radius: 5px;
+}
+
+section.all-details .all-patient-details {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+section.all-details .all-patient-details h1 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section.all-details .details-container {
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+section.all-details .details-container div label {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #222C63;
+}
+
+section.all-details .details-container div textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0px 20px;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 60px;
+    border: 2px solid #493736;
+}
+
+section.health-card-section div button,
+section.all-details .details-container div button {
+    margin: 10px auto;
+    display: inherit;
+    height: 40px;
+    background-color: #AE081B;
+    color: #FCFCFC;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+    padding: 5px 10px;
+}
+
+section.health-card-section div button:hover,
+section.all-details .details-container div button:hover {
+    border: 1px solid #efefef;
+    font-size: 15px;
+}
+
+section.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+section .record-card {
+    background-color: #FFFAE9;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+section .record-card .card-header {
+    text-align: center;
+}
+
+section .record-card .card-header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+section .record-card .card-body { 
+    word-wrap: break-word;
+    text-align: center;
+}
+
+section .record-card .card-body p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.patient-history button,
+section .record-card button {
+    width: 120px;
+    display: inherit;
+    margin: 0px auto;
+    height: 40px;
+    background-color: #AE081B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+}
+
+.prescription button,
+section .record-card button {
+    width: 120px;
+    display: inherit;
+    margin: 0px auto;
+    height: 40px;
+    background-color: #AE081B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+}
+
+.labs button,
+section .record-card button {
+    width: 120px;
+    display: inherit;
+    margin: 0px auto;
+    height: 40px;
+    background-color: #AE081B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+}
+section.record-details {
+    background-color: #FFFAE9;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+section.record-details .patient-history textarea {
+    width: 100%;
+    border-radius: 4px;
+    padding: 0px 20px;
+    font-size: 14px;
+    margin-top: 5px;
+    border: 1px solid #d4c7c7;
+    background-color: transparent;
+}
+
+section.record-details .prescription textarea {
+    width: 100%;
+    border-radius: 4px;
+    padding: 0px 20px;
+    font-size: 14px;
+    margin-top: 5px;
+    border: 1px solid #d4c7c7;
+    background-color: transparent;
+}
+
+section.record-details .labs textarea {
+    width: 100%;
+    border-radius: 4px;
+    padding: 0px 20px;
+    font-size: 14px;
+    margin-top: 5px;
+    border: 1px solid #d4c7c7;
+    background-color: transparent;
+}
+
+
+section.header {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    border-bottom: 1px solid #000;
+}
+
+section.header {
+    text-align: left;
+    margin: 16px;
+}
+
+section.header img {
+    width: 100px;
+}
+
+section.header h4 {
+    color: #AE081B;
+    text-transform: uppercase;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+section.header h5 {
+    color: #014075;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header p {
+    margin: 0px;
+}
+
+.all-patient-details .accordion {
+    border-radius: 5px;
+}
+
+.all-patient-details .accordion-button:not(.collapsed) {
+    background-color: #003175;
+    color: #BFD3F8;
+}
+
+.all-patient-details .accordion-button:not(.collapsed)::after {
+    background-image: url('./arrow.svg');
+}
+
+.all-patient-details .accordion-item {
+    border: 1px solid #e09d9d;
+}
+
+.all-patient-details .accordion-flush .accordion-item:first-child {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.all-patient-details .accordion-flush .accordion-item:last-child {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

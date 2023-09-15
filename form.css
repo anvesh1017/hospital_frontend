@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,600;0,900;1,100;1,600;1,900&display=swap');
+
+body {
+    font-family: montserrat, arial, verdana;
+    background-color: #fbffe3;
+    font-size: 14px;
+}
+
+input, textarea {
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: #493736;
+}
+
+main {
+    background-color: #493736;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.patient-form {
+    max-width: 700px;
+    margin: 10px auto;
+    background-color: #b9d7d9;
+    padding: 20px 40px;
+    border-radius: 50px;
+}
+
+.patient-form section {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.patient-form .image-upload {
+    margin-right: 40px;
+    padding: 0px 20px;
+}
+
+.patient-form .image-upload .col-ting {
+    padding: 10px;
+    border: 2px dashed #222C63;
+    cursor: pointer;
+}
+
+.patient-form .image-upload .col-ting .image-box {
+    text-align: center;
+    font-size: 12px;
+}
+
+.patient-form .image-upload .col-ting img {
+    width: 150px;
+    max-height: 150px;
+}
+
+.patient-form div {
+    margin: 10px 0px;
+}
+
+.patient-form div label { 
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #222C63;
+}
+
+.patient-form div label.radio-btn-label { 
+    font-size: 14px;
+    font-weight: normal;
+    color: #493736;
+}
+
+.patient-form input[type=text] {
+    width: 100%;
+    height: 40px;
+    padding: 0px 20px;
+    font-size: 14px;
+    margin-top: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #493736;
+    border-radius: 5px;
+}
+
+.patient-form input[type=radio] {
+    margin-right: 30px;
+    accent-color: #AE081B;
+    width: 15px;
+}
+
+.patient-form textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0px 20px;
+    font-size: 14px;
+    margin-top: 5px;
+    border: 2px solid #493736;
+}
+
+.patient-form select {
+    width: 100%;
+    padding: 0px 20px;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #493736;
+}
+
+.patient-form button[type=submit] {
+    width: 120px;
+    display: inherit;
+    margin-left: auto;
+    height: 40px;
+    background-color: #AE081B;
+    color: #FCFCFC;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+}
+
+.patient-form button[type=submit]:hover {
+    border: 1px solid #efefef;
+    font-size: 15px;
+}
+
+section.header {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    border-bottom: 1px solid #000;
+}
+
+section.header {
+    text-align: left;
+    margin: 16px;
+}
+
+section.header img {
+    width: 100px;
+}
+
+section.header h4 {
+    color: #AE081B;
+    text-transform: uppercase;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+section.header h5 {
+    color: #014075;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header p {
+    margin: 0px;
+}

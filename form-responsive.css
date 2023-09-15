@@ -1,0 +1,5 @@
+@media screen and (max-width: 770px) {
+    .patient-form section {
+        flex-direction: column;
+    }
+}

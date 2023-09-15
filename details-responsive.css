@@ -1,0 +1,10 @@
+@media screen and (max-width: 770px) {
+    section.health-card-section .details {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    section.all-details .tab-container .tab-btn {
+        margin-bottom: 20px;
+    }
+}
