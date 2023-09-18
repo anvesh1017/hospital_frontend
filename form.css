@@ -2,7 +2,7 @@
 
 body {
     font-family: montserrat, arial, verdana;
-    background-color: #fbffe3;
+    background-color: #f8f4e3;
     font-size: 14px;
 }
 
@@ -15,7 +15,6 @@ input, textarea {
 }
 
 main {
-    background-color: #493736;
     padding: 20px;
     border-radius: 5px;
 }
@@ -23,9 +22,10 @@ main {
 .patient-form {
     max-width: 700px;
     margin: 10px auto;
-    background-color: #b9d7d9;
+    background-color: #fff;
     padding: 20px 40px;
     border-radius: 50px;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
 }
 
 .patient-form section {
@@ -43,6 +43,8 @@ main {
     padding: 10px;
     border: 2px dashed #222C63;
     cursor: pointer;
+    width: 200px;
+    height: 250px;
 }
 
 .patient-form .image-upload .col-ting .image-box {
@@ -51,8 +53,8 @@ main {
 }
 
 .patient-form .image-upload .col-ting img {
-    width: 150px;
-    max-height: 150px;
+    width: 100%;
+    max-height: 230px;
 }
 
 .patient-form div {
@@ -91,6 +93,10 @@ main {
     width: 15px;
 }
 
+.patient-form input.error {
+    border-bottom: 3px solid #d00000;
+}
+
 .patient-form textarea {
     width: 100%;
     border-radius: 5px;
@@ -113,10 +119,25 @@ main {
     border-bottom: 2px solid #493736;
 }
 
-.patient-form button[type=submit] {
+.patient-form .error_label {
+    margin: 0px;
+}
+
+.patient-form .error_label label {
+    font-size: 12px;
+    color: #d00000;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-top: 0px;
+}
+
+.patient-form .btns-div {
+    text-align: right;
+}
+
+.patient-form button {
     width: 120px;
-    display: inherit;
-    margin-left: auto;
+    margin: 10px 20px;
     height: 40px;
     background-color: #AE081B;
     color: #FCFCFC;
@@ -126,9 +147,26 @@ main {
     border: none;
 }
 
-.patient-form button[type=submit]:hover {
-    border: 1px solid #efefef;
-    font-size: 15px;
+.patient-form button.cancel-btn {
+    width: 120px;
+    margin: 10px 20px;
+    height: 40px;
+    background-color: transparent;
+    color: #AE081B;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid #AE081B;
+}
+
+.patient-form button.cancel-btn:hover {
+    background-color: #AE081B;
+    color: #FCFCFC;
+}
+
+.patient-form button:hover {
+    background-color: #fdb813;
+    color: #000;
 }
 
 section.header {
@@ -136,11 +174,9 @@ section.header {
     align-items: center;
     column-gap: 20px;
     border-bottom: 1px solid #000;
-}
-
-section.header {
     text-align: left;
-    margin: 16px;
+    padding: 16px;
+    background-image: linear-gradient(90deg, #fff, #fdb813);
 }
 
 section.header img {
@@ -166,3 +202,72 @@ section.header h5 {
 header p {
     margin: 0px;
 }
+
+.patient-form.hide {
+    display: none;
+}
+
+section.result-section.hide {
+    display: none;
+}
+
+section.result-section {
+    padding: 40px;
+    border-radius: 50px;
+    max-width: 700px;
+    margin: 0px auto;
+}
+
+.health-card-div {
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.health-card-div #qrcode img {
+    margin: 0px auto 16px auto;
+}
+
+.health-card-div .details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.health-card-div .details #image-div img {
+    width: 150px;
+    height: 150px;
+}
+
+.health-card-div .details #patient-details-div {
+    text-align: left;
+}
+
+.health-card-div .details #patient-details-div p {
+    margin-top: 0px;
+}
+
+section.footer {
+    border-top: 1px solid #000;
+    text-align: left;
+    padding: 16px;
+    background-image: linear-gradient(90deg, #e0e8f0, #9ec2d8);
+  }
+  
+  section.footer  h3 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  section.footer  p {
+    font-size: 12px;
+  }
+  
+  section.footer  li {
+    font-size: 12px;
+  }

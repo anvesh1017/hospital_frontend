@@ -37,54 +37,87 @@
         </div>
    </nav> -->
    <main>
-        <!--Patient Details-->
-        <h1 class="page-heading">PATIENT DETAILS</h1>
-        <section class="health-card-section">
-            <div class="heading">
-                <label>HEALTH CARD</label>
-                <p>A health card, also known as a medical card or healthcare identification card, is a vital document that provides individuals with access to healthcare services. Typically issued by government agencies or private healthcare providers, it contains essential information such as the cardholder's name, date of birth, and unique identification number. The card may also include details about the individual's health insurance coverage, medical history, and contact information for healthcare providers. Health cards play a crucial role in streamlining patient care, facilitating insurance claims, and ensuring that individuals receive the necessary medical attention when needed, promoting overall well-being and timely healthcare access</p>
-            </div>
-            <div class="details">
-                <div class="patient-image">
-                    <img src="https://scontent.fhyd1-5.fna.fbcdn.net/v/t1.6435-1/61182397_2766044156799606_316365332518273024_n.jpg?stp=dst-jpg_p480x480&_nc_cat=106&ccb=1-7&_nc_sid=7206a8&_nc_ohc=XjZ8pBUrjz0AX-GZRif&_nc_ht=scontent.fhyd1-5.fna&oh=00_AfAyUGc-QC_sJKRhrUc17T1MgY9_1_RJMLi3BWg2MgMllQ&oe=6525398E" />
-                </div>
-                <div class="patient-details">
 
-                    <table>
-                        <tr>
-                            <th>Name</th>
-                            <td>:</td>
-                            <td>Raja Sathvik Potu</td>
-                        </tr>
-                        <tr>
-                            <th>Phone</th>
-                            <td>:</td>
-                            <td>9911227722</td>
-                        </tr>
-                        <tr>
-                            <th>Address</th>
-                            <td>:</td>
-                            <td>VDO's colony, Khammam, Telangana, 507001</td>
-                        </tr>
-                    </table>
+      <section class="info-div">
+        
+        <section class="health-card-section">
+                <div class="heading">
+                  <label>DIGITAL HEALTH CARD</label>
+                    <p>A health card, also known as a medical card or healthcare identification card, is a vital document that provides individuals with access to healthcare services. Typically issued by government agencies or private healthcare providers, it contains essential information such as the cardholder's name, date of birth, and unique identification number. The card may also include details about the individual's health insurance coverage, medical history, and contact information for healthcare providers. Health cards play a crucial role in streamlining patient care, facilitating insurance claims, and ensuring that individuals receive the necessary medical attention when needed, promoting overall well-being and timely healthcare access</p>
                 </div>
-                <div class="qr-image">
+        </section>
+
+              
+        <!--Patient Details-->
+        <section class="health-card-section">
+          <div class="heading">
+            <label>PATIENT DETAILS</label>
+          </div>
+          <div class="details">
+              <div class="patient-image">
+                  <img class="profile-pic" src="https://scontent.fhyd1-5.fna.fbcdn.net/v/t1.6435-1/61182397_2766044156799606_316365332518273024_n.jpg?stp=dst-jpg_p480x480&_nc_cat=106&ccb=1-7&_nc_sid=7206a8&_nc_ohc=XjZ8pBUrjz0AX-GZRif&_nc_ht=scontent.fhyd1-5.fna&oh=00_AfAyUGc-QC_sJKRhrUc17T1MgY9_1_RJMLi3BWg2MgMllQ&oe=6525398E" />
+                  <div class="qr-image">
                     <img  src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"/>
                 </div>
-            </div>
-            <div>
-                <button type="button">Print health card</button>
-                <button type="button">Assign a Doctor</button>
-            </div>
-        </section>
+              </div>
+              <div class="patient-details">
+
+                  <table>
+                    <tr>
+                      <th>Name</th>
+                      <td>:</td>
+                      <td>Raja Sathvik Potu</td>
+                  </tr>
+                  <tr>
+                    <th>Date of Birth</th>
+                    <td>:</td>
+                    <td>26/07/1992</td>
+                  </tr>
+                  <tr>
+                    <th>Age</th>
+                    <td>:</td>
+                    <td>31</td>
+                  </tr>
+                  <tr>
+                    <th>Aadhar Card</th>
+                    <td>:</td>
+                    <td>xxxxxxx8962</td>
+                </tr>
+                  <tr>
+                      <th>Phone</th>
+                      <td>:</td>
+                      <td>9911227722</td>
+                  </tr>
+                  <tr>
+                      <th>Address</th>
+                      <td>:</td>
+                      <td>VDO's colony, Khammam, Telangana, 507001</td>
+                  </tr>
+                  </table>
+              </div>
+          </div>
+          <div>
+              <button type="button">Print health card</button>
+          </div>
+      </section>
+
+
+      </section>
+
+
 
         <section class="all-details">
             <div class="tab-container">
                 
                 <div class="tab-headers">
+                    <button class="tab-btn" onclick="openCity(event,'doctor')">Assign a Doctor</button>
                     <button class="tab-btn active" onclick="openCity(event,'history')">Patient History</button>
                     <button class="tab-btn" onclick="openCity(event,'prescription')">Prescription</button>
                     <button class="tab-btn" onclick="openCity(event,'lab-tests')">Lab/Test Results</button>
+                </div>
+
+                <div id="doctor" class="all-patient-details" style="display:none">
+                  <h1>Assign a Doctor</h1>
                 </div>
                 
                 <div id="history" class="all-patient-details">
@@ -228,8 +261,42 @@
    </main>
 
    <footer>
-
-   </footer>
+    <section class="footer">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <section id="custom_html-2" class="widget_text widget widget_custom_html">
+                        <h3 class="widget-title">About The College</h3>
+                        <div class="textwidget custom-html-widget">
+                            <p>
+                                MES Society was primarily established for the educational, socio-economic and healthcare upliftment of the people belonging to Telangana Region of Andhra Pradesh in general and Khammam district in particular.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-12 col-md-4"></div>
+                <div class="col-12 col-md-4">
+                    <section id="custom_html-3" class="widget_text widget widget_custom_html">
+                        <h3 class="widget-title">Get In Touch</h3>
+                        <div class="textwidget custom-html-widget">
+                            <div class="row">
+                                <div class="col-md-12">
+                                   <p> Mamata Medical College, Rotary Nagar, Khammam-507002, Telangana, INDIA</p>
+                                </div>
+                                <div class="col-md-12">
+                                    <p><i class="fa fa-phone" aria-hidden="true"></i> Phone: 08742-295719 <br />
+                                        <i class="fa fa-mobile" aria-hidden="true"></i> Mobile 080089 04501<br />
+                                        <i class="fa fa-fax" aria-hidden="true"></i> Fax: 08742-234206 &amp; 255718
+                                    </p>
+                                </div>
+                                <div class="col-md-12"><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:infomamata@yahoo.co.in">infomamata@yahoo.co.in</a></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        
+    </section>
+  </footer>
 
    <script>
     function openCity(event,tab) {

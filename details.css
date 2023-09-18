@@ -2,7 +2,8 @@
 
 body {
     font-family: montserrat, arial, verdana;
-    background-color: #fbffe3;
+    /* background-color: #fbffe3; */
+    background-color: #f8f4e3;
     font-size: 14px;
 }
 
@@ -15,7 +16,7 @@ input, textarea {
 }
 
 main {
-    background-color: #493736;
+    /* background-color: rgba(185, 185, 185, 0.448); */
     padding: 20px;
     border-radius: 5px;
 }
@@ -27,11 +28,21 @@ main {
     color: #fbffe3;
 }
 
+.info-div {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 section.health-card-section {
-    background-color: #b9d7d9;
-    border-radius: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 48%;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    height: inherit;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
 }
 
 section.health-card-section .heading {
@@ -42,22 +53,20 @@ section.health-card-section .heading {
 section.health-card-section .heading label {
     font-size: 20px;
     font-weight: 600;
+    margin-bottom: 20px;
     color: #493736;
 }
 
 section.health-card-section .details  {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    max-width: 800px;
-    margin: 10px auto;
     padding: 10px 20px;
-    background-color: #fff;
-    column-gap: 20px;
+    column-gap: 40px;
+    flex-direction: column;
 }
 
 section.health-card-section .details  .patient-details {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 section.health-card-section .details .patient-details table th {
@@ -73,20 +82,34 @@ section.health-card-section .details .patient-details table td {
     padding-right: 20px;
 }
 
+section.health-card-section .details .qr-image {
+    background-color: #fff;
+    border-radius: 1px solid #c7c7c7;
+}
+
 section.health-card-section .details .qr-image img {
     width: 150px;
 }
 
-section.health-card-section .details  .patient-image img {
+section.health-card-section .details  .patient-image {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+section.health-card-section .details  .patient-image .profile-pic {
     width: 150px;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 section.all-details {
-    background-color: #b9d7d9;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 50px;
-    margin-bottom: 20px;
+    border-radius: 8px;
+    margin: 20px 0px;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
 }
 
 section.all-details .tab-container {
@@ -158,15 +181,15 @@ section.all-details .details-container div button {
     color: #FCFCFC;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 50px;
+    border-radius: 8px;
     border: none;
     padding: 5px 10px;
 }
 
 section.health-card-section div button:hover,
 section.all-details .details-container div button:hover {
-    border: 1px solid #efefef;
-    font-size: 15px;
+    background-color: #fdb813;
+    color: #000;
 }
 
 section.cards {
@@ -215,7 +238,7 @@ section .record-card button {
     color: #fff;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 50px;
+    border-radius: 8px;
     border: none;
 }
 
@@ -229,7 +252,7 @@ section .record-card button {
     color: #fff;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 50px;
+    border-radius: 8px;
     border: none;
 }
 
@@ -243,7 +266,7 @@ section .record-card button {
     color: #fff;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 50px;
+    border-radius: 8px;
     border: none;
 }
 section.record-details {
@@ -288,11 +311,9 @@ section.header {
     align-items: center;
     column-gap: 20px;
     border-bottom: 1px solid #000;
-}
-
-section.header {
     text-align: left;
-    margin: 16px;
+    padding: 16px;
+    background-image: linear-gradient(90deg, #fff, #fdb813);
 }
 
 section.header img {
@@ -345,3 +366,25 @@ header p {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+
+section.footer {
+    border-top: 1px solid #000;
+    text-align: left;
+    padding: 16px;
+    background-image: linear-gradient(90deg, #e0e8f0, #9ec2d8);
+  }
+  
+  section.footer  h3 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  section.footer  p {
+    font-size: 12px;
+  }
+  
+  section.footer  li {
+    font-size: 12px;
+  }

@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-    $("#create_patient_form").validate({
+    var validator = $("#create_patient_form").validate({
+        focusInvalid: false,
         rules: {
             firstname: "required",
             lastname: "required",
@@ -62,24 +63,50 @@ $(document).ready(function () {
                 maxlength: "maximum length of Aaadhar number is 12"
             }
         },
+        errorPlacement: function(error, element) {
+            const elementName = $(element).attr('name');
+            $(`#${elementName}_error`).append(error);
+        },
         submitHandler: function (form) {
             const formFieldValues = $(form).serializeArray();
-            console.log('formFieldValues : ', formFieldValues)
             let formInputs = {};
 
             formFieldValues.forEach(eachField => {
                 formInputs[eachField.name] = eachField.value;
             })
 
-            formInputs.is_health_card = false;
+           
             if (formInputs.hasOwnProperty('is_health_card')) {
-                formInputs.hasOwnProperty = true;
+                formInputs.is_health_card = true;
+            } else {
+                formInputs.is_health_card = false;
             }
-
-            console.log(formInputs);
             createPatient(formInputs)
                 .then(result => {
-                    console.log('result : ', result)
+
+                    if(result.is_health_card) {
+                        let qrc = new QRCode(document.getElementById("qrcode"), {
+                            text: `http://localhost:8000/health-card-id/${result.health_card_id}`,
+                            width: 150,
+                            height: 150,
+                          });
+
+                          const addressOne = (result.street_address !== '') ? result.street_address : '';
+                          const city = (result.city !== '') ? result.city : '';
+                          const state = (result.state !== '') ? result.state : '';
+
+
+
+                          $('#patient-details-div').append(`
+                            <p>${result.firstname} ${result.lastname}</p>
+                            <p>${result.mobile}</p>
+                            <p>${addressOne}, ${city}, ${state}, ${result.pincode}</p>
+                        `);
+                        $(form).addClass('hide');
+                        $('#result-section').removeClass('hide');
+                    }
+
+                    validator.resetForm();
                 })
                 .catch(err => {
                     console.log('err : ', JSON.stringify(err))
@@ -105,6 +132,10 @@ $(document).ready(function () {
         })
     }
 
-
+    
+    $(document).on('click', '#resetForm', () => {
+       
+        validator.resetForm();
+    });
 
 })
