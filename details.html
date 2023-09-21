@@ -56,47 +56,47 @@
           <div class="details">
               <div class="patient-image">
                   <img class="profile-pic" src="https://scontent.fhyd1-5.fna.fbcdn.net/v/t1.6435-1/61182397_2766044156799606_316365332518273024_n.jpg?stp=dst-jpg_p480x480&_nc_cat=106&ccb=1-7&_nc_sid=7206a8&_nc_ohc=XjZ8pBUrjz0AX-GZRif&_nc_ht=scontent.fhyd1-5.fna&oh=00_AfAyUGc-QC_sJKRhrUc17T1MgY9_1_RJMLi3BWg2MgMllQ&oe=6525398E" />
-                  <div class="qr-image">
+                  <div id="qrimage" class="qr-image">
                     <img  src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"/>
                 </div>
               </div>
               <div class="patient-details">
 
-                  <table>
-                    <tr>
-                      <th>Name</th>
-                      <td>:</td>
-                      <td>Raja Sathvik Potu</td>
-                  </tr>
+                <table>
                   <tr>
-                    <th>Date of Birth</th>
+                    <th>Name</th>
                     <td>:</td>
-                    <td>26/07/1992</td>
-                  </tr>
-                  <tr>
-                    <th>Age</th>
-                    <td>:</td>
-                    <td>31</td>
-                  </tr>
-                  <tr>
-                    <th>Aadhar Card</th>
-                    <td>:</td>
-                    <td>xxxxxxx8962</td>
+                    <td>Raja Sathvik Potu</td>
                 </tr>
-                  <tr>
-                      <th>Phone</th>
-                      <td>:</td>
-                      <td>9911227722</td>
-                  </tr>
-                  <tr>
-                      <th>Address</th>
-                      <td>:</td>
-                      <td>VDO's colony, Khammam, Telangana, 507001</td>
-                  </tr>
-                  </table>
+                <tr>
+                  <th>Date of Birth</th>
+                  <td>:</td>
+                  <td>26/07/1992</td>
+                </tr>
+                <tr>
+                  <th>Age</th>
+                  <td>:</td>
+                  <td>31</td>
+                </tr>
+                <tr>
+                  <th>Aadhar Card</th>
+                  <td>:</td>
+                  <td>xxxxxxx8962</td>
+              </tr>
+                <tr>
+                    <th>Phone</th>
+                    <td>:</td>
+                    <td>9911227722</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>:</td>
+                    <td>VDO's colony, Khammam, Telangana, 507001</td>
+                </tr>
+                </table>
               </div>
           </div>
-          <div>
+          <div style="text-align: center;">
               <button type="button">Print health card</button>
           </div>
       </section>
@@ -118,6 +118,18 @@
 
                 <div id="doctor" class="all-patient-details" style="display:none">
                   <h1>Assign a Doctor</h1>
+                  <p>You can assign doctor to the patient based on the symptoms that need to be checkout from another specialisation/department</p>
+                  <div class="details-container">
+                      <div class="add-text-div">
+                        <select>
+                          <option value="">select doctor</option>
+                          <option value="doc_id1">Dr Naren</option>
+                          <option value="doc_id2">Dr Nayan</option>
+                        </select>
+      
+                        <button type="button">Assign</button>
+                      </div>
+                  </div>
                 </div>
                 
                 <div id="history" class="all-patient-details">
@@ -125,88 +137,45 @@
                     <p>A person's patient history is a detailed record of their medical, social, and personal background, including past illnesses, surgeries, medications, and lifestyle factors. This information is essential for healthcare professionals to provide personalized care, make informed diagnoses, and create effective treatment plans.</p>
 
                     <div class="details-container">
-                        <div>
+                        <div class="add-text-div">
                             <textarea placeholder="Enter current symptoms of the patient to maintain the history of the patient"></textarea>
                             <button type="button" id="add-patient-history">Add Patient History</button>
                         </div>
                     </div>
 
-                    <div class="accordion accordion-flush" id="patient-history-table">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-history1">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#history-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              12 September 2023
-                            </button>
-                          </h2>
-                          <div id="history-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-history1" data-bs-parent="#patient-history-table">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-history2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#history-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              31 August 2023
-                            </button>
-                          </h2>
-                          <div id="history-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-history2" data-bs-parent="#patient-history-table">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-history3">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#history-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                              19 July 2023
-                            </button>
-                          </h2>
-                          <div id="history-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-history3" data-bs-parent="#patient-history-table">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                          </div>
-                        </div>
-                      </div>
                 </div>
                 
                 <div id="prescription" class=" all-patient-details" style="display:none">
                     <h1>Prescription</h1>
                     <p>A prescription is a medical document provided by a healthcare professional, enabling individuals to obtain specific medications or treatments. It outlines essential information like the medication name, dosage, administration instructions, and the prescriber's signature, ensuring safe and regulated access to necessary healthcare interventions.</p>
                     <div class="details-container">
-                        <div>
+                        <div class="add-text-div">
                             <textarea placeholder="Enter current symptoms of the patient to maintain the history of the patient"></textarea>
                             <button type="button" id="add-patient-history">Add Prescription</button>
                         </div>
+
+                        <div class="seperator"></div>
+
+                        <div class="upload-container">
+                          <div class="card">
+                            <div class="drop_box">
+                              <header>
+                                <h4>Select File here</h4>
+                              </header>
+                              <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+                              <input id="prescription_file" type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style="display:none;">
+                              <div id="file-upload-div">
+
+                              </div>
+                              <button data-target="prescription_file" class="button">Choose File</button>
+                            </div>
+                        
+                          </div>
+                        </div>
+
                     </div>
 
-                    <div class="accordion accordion-flush" id="prescription-table">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-prescription1">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#prescription-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              12 September 2023
-                            </button>
-                          </h2>
-                          <div id="prescription-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-prescription1" data-bs-parent="#prescription-table">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-prescription2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#prescription-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              31 August 2023
-                            </button>
-                          </h2>
-                          <div id="prescription-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-prescription2" data-bs-parent="#prescription-table">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-prescription3">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#prescription-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                              19 July 2023
-                            </button>
-                          </h2>
-                          <div id="prescription-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-prescription3" data-bs-parent="#prescription-table">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                          </div>
-                        </div>
-                      </div>
+
                 </div>
                 
                 <div id="lab-tests" class=" all-patient-details" style="display:none">
@@ -215,47 +184,84 @@
                         Medical labs and tests are essential diagnostic tools used to assess a person's health. These examinations encompass a wide range of procedures, from blood tests to imaging studies, helping healthcare providers gather crucial data to determine the presence or progression of diseases, guide treatment decisions, and monitor overall well-being.
                     </p>
                     <div class="details-container">
-                        <div>
+                        <div class="add-text-div">
                             <textarea placeholder="Enter current symptoms of the patient to maintain the history of the patient"></textarea>
                             <button type="button" id="add-patient-history">Add Lab/Test Results</button>
                         </div>
+
+                        <div class="seperator"></div>
+
+                        <!-- <div class="upload-files">  -->
+                          <div class="upload-container">
+                            <div class="card">
+                              <div class="drop_box">
+                                <header>
+                                  <h4>Select File here</h4>
+                                </header>
+                                <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+                                <input id="labresult_file" type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style="display:none;">
+                                <div id="file-upload-div">
+
+                                </div>
+                                <button data-target="labresult_file" class="button">Choose File</button>
+                              </div>
+                          
+                            </div>
+                          </div>
+                        <!-- </div> -->
                     </div>
 
-                    <div class="accordion accordion-flush" id="results-table">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-results1">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#results-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              12 September 2023
-                            </button>
-                          </h2>
-                          <div id="results-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-results1" data-bs-parent="#results-table">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-results2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#results-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              31 August 2023
-                            </button>
-                          </h2>
-                          <div id="results-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-results2" data-bs-parent="#results-table">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-results3">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#results-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                              19 July 2023
-                            </button>
-                          </h2>
-                          <div id="results-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-results3" data-bs-parent="#results-table">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                          </div>
-                        </div>
-                      </div>
+
                 </div>
 
             </div>
+        </section>
+
+        <section class="patient-datewise-details">
+          <h1>All Patient Records by Visit Date</h1>
+          <div class="accordion accordion-flush" id="results-table">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-results1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#results-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  12 September 2023  (Dr. Naren)
+                </button>
+              </h2>
+              <div id="results-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-results1" data-bs-parent="#results-table">
+                <div class="accordion-body">
+                    <a target="_blank" href="https://data.patientcarelink.org/nqf_new/Sample_Page.pdf">sathvik_12092023_labresult.pdf</a>
+                    <a target="_blank" href="https://ncert.nic.in/vocational/pdf/keda101.pdf">sathvik_12092023_prescription.pdf</a>
+                    <a href="javascript:void(0)">sathvik_12092023_labresult.pdf</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-results2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#results-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  31 August 2023 (Dr. Naren)
+                </button>
+              </h2>
+              <div id="results-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-results2" data-bs-parent="#results-table">
+                <div class="accordion-body">
+                  <a href="javascript:void(0)">sathvik_31082023_labresult.pdf</a>
+                  <a href="javascript:void(0)">sathvik_31082023_labresult.pdf</a>
+                  <a href="javascript:void(0)">sathvik_31082023_labresult.pdf</a>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-results3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#results-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  19 July 2023 (Dr. Nayan)
+                </button>
+              </h2>
+              <div id="results-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-results3" data-bs-parent="#results-table">
+                <div class="accordion-body">
+                  <a href="javascript:void(0)">sathvik_19072023_prescription.pdf</a>
+                  <a href="javascript:void(0)">sathvik_19072023_labresult.pdf</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
    </main>
@@ -313,8 +319,15 @@
       event.currentTarget.className += " active";  
     }
     </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js" integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js" integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./details.js"></script>
 </body>
 </html>

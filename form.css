@@ -17,6 +17,7 @@ input, textarea {
 main {
     padding: 20px;
     border-radius: 5px;
+    min-height: 500px;
 }
 
 .patient-form {
@@ -26,6 +27,13 @@ main {
     padding: 20px 40px;
     border-radius: 50px;
     box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+.patient-form h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .patient-form section {
@@ -84,7 +92,7 @@ main {
     border-left: none;
     border-right: none;
     border-bottom: 2px solid #493736;
-    border-radius: 5px;
+    background-color: #eee9e9;
 }
 
 .patient-form input[type=radio] {
@@ -112,10 +120,10 @@ main {
     height: 40px;
     font-size: 14px;
     margin-top: 5px;
-    border-radius: 5px;
     border-top: none;
     border-left: none;
     border-right: none;
+    background-color: #eee9e9;
     border-bottom: 2px solid #493736;
 }
 
@@ -135,8 +143,13 @@ main {
     text-align: right;
 }
 
+section.result-section div.btns-div {
+    text-align: center;
+}
+
+section.result-section div button,
 .patient-form button {
-    width: 120px;
+    min-width: 120px;
     margin: 10px 20px;
     height: 40px;
     background-color: #AE081B;
@@ -145,6 +158,7 @@ main {
     font-weight: 600;
     border-radius: 50px;
     border: none;
+    padding: 10px;
 }
 
 .patient-form button.cancel-btn {
@@ -164,6 +178,7 @@ main {
     color: #FCFCFC;
 }
 
+section.result-section div button:hover,
 .patient-form button:hover {
     background-color: #fdb813;
     color: #000;
@@ -216,38 +231,79 @@ section.result-section {
     border-radius: 50px;
     max-width: 700px;
     margin: 0px auto;
-}
-
-.health-card-div {
-    max-width: 400px;
     background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+section.result-section .heading {
     text-align: center;
+    padding: 10px;
 }
 
-.health-card-div #qrcode img {
-    margin: 0px auto 16px auto;
+section.result-section .heading h3 {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #AE081B;
+    text-transform: uppercase;
 }
 
-.health-card-div .details {
+section.result-section .heading h5 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #493736;
+    text-transform: uppercase;
+}
+
+section.result-section .details  {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    column-gap: 40px;
+    flex-direction: column;
+    border: 2px solid #222C63;
+}
+
+section.result-section .details  #patient-details-div {
+    font-size: 14px;
+    padding: 0px 15px;
+}
+
+section.result-section .details #patient-details-div table th {
+    font-weight: 600;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+section.result-section .details #patient-details-div table td {
+    padding-bottom: 0px;
+    padding-right: 10px;
+}
+
+section.result-section .details #qrcode {
+    background-color: #fff;
+    border: 1px solid #c7c7c7;
+    padding: 5px;
+}
+
+section.result-section .details #qrcode img {
+    width: 100px;
+}
+
+section.result-section .details  .patient-image {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.health-card-div .details #image-div img {
-    width: 150px;
-    height: 150px;
-}
-
-.health-card-div .details #patient-details-div {
-    text-align: left;
-}
-
-.health-card-div .details #patient-details-div p {
-    margin-top: 0px;
+section.result-section .details  .patient-image .profile-pic {
+    width: 100px;
+    border-radius: 50%;
 }
 
 section.footer {

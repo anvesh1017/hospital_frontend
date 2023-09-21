@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamata Patient Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./details.css" />
+    <link rel="stylesheet" href="./details-responsive.css" />
+</head>
+<body>
+   <header>
+
+    <section class="header">
+        <div>
+            <img src="./mamata-image.jpg" />
+        </div>
+        <div >
+            <h4>
+                Mamata
+            </h4>
+            <h5>
+                Medical College
+            </h5>
+            <p>
+                (Under the Management of Mamata Educational Society. Khammam)
+            </p>
+        </div>
+    </section>
+   </header>
+
+   <main>
+
+      <section class="info-div">
+        
+        <section class="health-card-section">
+                <div class="heading">
+                  <label>DIGITAL HEALTH CARD</label>
+                    <p>A health card, also known as a medical card or healthcare identification card, is a vital document that provides individuals with access to healthcare services. Typically issued by government agencies or private healthcare providers, it contains essential information such as the cardholder's name, date of birth, and unique identification number. The card may also include details about the individual's health insurance coverage, medical history, and contact information for healthcare providers. Health cards play a crucial role in streamlining patient care, facilitating insurance claims, and ensuring that individuals receive the necessary medical attention when needed, promoting overall well-being and timely healthcare access</p>
+                </div>
+        </section>
+
+        <section class="carousel-section">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://mamatamedicalcollege.com/wp-content/uploads/2020/06/2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Mamata Multi Speciality</h5>
+                  <!-- <p>Some representative placeholder content for the first slide.</p> -->
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://mamatamedicalcollege.com/wp-content/uploads/2020/06/6.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>In-patient Block</h5>
+                  <!-- <p>Some representative placeholder content for the second slide.</p> -->
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://mamatamedicalcollege.com/wp-content/uploads/2020/06/about-founder.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Puvvada Nageshwar Rao Block</h5>
+                  <!-- <p>Some representative placeholder content for the third slide.</p> -->
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+
+      </section>
+
+
+      <section class="get-info-div">
+          <div class="get-create-patient-info-div">
+              <div class="create-patient-div">
+                  <h2>Create Patient Record</h2>
+                  <a target="_blank" href="./form.html" type="button">Create</a>
+              </div>
+              <div class="get-patient-div">
+                <h2>Get Patient Record by Aadhar Id</h2>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="search by" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">search</span>
+                  </div>
+                </div>
+            </div>
+            <!-- <div> -->
+              <div class="upload-container">
+                <div class="card">
+                  <div class="drop_box">
+                    <header>
+                      <h4>Scan QR code</h4>
+                      <p>scan the QR code on the health card to get the patient details</p>
+                    </header>
+                    <input id="labresult_file" type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style="display:none;">
+                    <div id="file-upload-div">
+
+                    </div>
+                    <button data-target="labresult_file" class="button">Scan</button>
+                  </div>
+              
+                </div>
+              </div>
+          <!-- </div> -->
+          </div>
+      </section>
+
+
+
+   </main>
+
+   <footer>
+    <section class="footer">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <section id="custom_html-2" class="widget_text widget widget_custom_html">
+                        <h3 class="widget-title">About The College</h3>
+                        <div class="textwidget custom-html-widget">
+                            <p>
+                                MES Society was primarily established for the educational, socio-economic and healthcare upliftment of the people belonging to Telangana Region of Andhra Pradesh in general and Khammam district in particular.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-12 col-md-4"></div>
+                <div class="col-12 col-md-4">
+                    <section id="custom_html-3" class="widget_text widget widget_custom_html">
+                        <h3 class="widget-title">Get In Touch</h3>
+                        <div class="textwidget custom-html-widget">
+                            <div class="row">
+                                <div class="col-md-12">
+                                   <p> Mamata Medical College, Rotary Nagar, Khammam-507002, Telangana, INDIA</p>
+                                </div>
+                                <div class="col-md-12">
+                                    <p><i class="fa fa-phone" aria-hidden="true"></i> Phone: 08742-295719 <br />
+                                        <i class="fa fa-mobile" aria-hidden="true"></i> Mobile 080089 04501<br />
+                                        <i class="fa fa-fax" aria-hidden="true"></i> Fax: 08742-234206 &amp; 255718
+                                    </p>
+                                </div>
+                                <div class="col-md-12"><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:infomamata@yahoo.co.in">infomamata@yahoo.co.in</a></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        
+    </section>
+  </footer>
+
+   <script>
+    function openCity(event,tab) {
+      var i;
+      var x = document.getElementsByClassName("all-patient-details");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      var tabBtn = document.getElementsByClassName("tab-btn");
+      for (i = 0; i < x.length; i++) {
+        tabBtn[i].classList.remove('active');  
+      }
+      document.getElementById(tab).style.display = "block";
+      event.currentTarget.className += " active";  
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

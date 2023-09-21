@@ -19,6 +19,7 @@ main {
     /* background-color: rgba(185, 185, 185, 0.448); */
     padding: 20px;
     border-radius: 5px;
+    min-height: 500px;
 }
 
 .page-heading {
@@ -35,6 +36,7 @@ main {
     justify-content: space-between;
 }
 
+section.carousel-section,
 section.health-card-section {
     background-color: #fff;
     border-radius: 8px;
@@ -43,6 +45,12 @@ section.health-card-section {
     margin-bottom: 40px;
     height: inherit;
     box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+section.carousel-section .carousel-caption {
+    position: inherit;
+    right: 0;
+    left: 0;
 }
 
 section.health-card-section .heading {
@@ -84,7 +92,8 @@ section.health-card-section .details .patient-details table td {
 
 section.health-card-section .details .qr-image {
     background-color: #fff;
-    border-radius: 1px solid #c7c7c7;
+    border: 1px solid #c7c7c7;
+    padding: 5px;
 }
 
 section.health-card-section .details .qr-image img {
@@ -112,13 +121,44 @@ section.all-details {
     box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
 }
 
+.get-create-patient-info-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.get-create-patient-info-div .create-patient-div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
+    min-width: 450px;
+} 
+
+.get-create-patient-info-div .get-patient-div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
+    min-width: 450px;
+}
+
+/* .get-create-patient-info-div .upload-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0px;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
+} */
+
 section.all-details .tab-container {
     border-radius: 5px;
     padding: 20px;
 }
 
 section.all-details .tab-container .tab-headers {
-    border-bottom: 1px solid #e09d9d;
+    border-bottom: 4px solid #493736;
 }
 
 section.all-details .tab-container .tab-btn {
@@ -130,11 +170,13 @@ section.all-details .tab-container .tab-btn {
     border: none;
     padding-bottom: 10px;
     margin-right: 40px;
+    padding: 10px;
 }
 
 section.all-details .tab-container .tab-btn.active {
-    border-bottom: 4px solid #493736;
-    border-radius: 5px;
+    background-color: #493736;
+    color: #fff;
+    border-radius: 4px 4px 0px 0px;
 }
 
 section.all-details .all-patient-details {
@@ -151,15 +193,38 @@ section.all-details .all-patient-details h1 {
 }
 
 section.all-details .details-container {
-    max-width: 600px;
-    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
 }
 
-section.all-details .details-container div label {
+section.all-details .details-container div.seperator {
+    border: 1px solid #c7c7c7;
+    height: 240px;
+}
+
+section.all-details .details-container div.add-text-div {
+    min-width: 500px;
+}
+
+section.all-details .details-container div.add-text-div label {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.5px;
     color: #222C63;
+}
+
+section.all-details .details-container div.add-text-div select {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0px 20px;
+    height: 40px;
+    border: 2px solid #493736;
+}
+
+section.all-details .details-container div.add-text-div {
+    text-align: center;
 }
 
 section.all-details .details-container div textarea {
@@ -172,8 +237,20 @@ section.all-details .details-container div textarea {
     border: 2px solid #493736;
 }
 
-section.health-card-section div button,
-section.all-details .details-container div button {
+.get-create-patient-info-div h2 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.get-create-patient-info-div .input-group-text {
+    background-color: #AE081B;
+    color: #fcfcfc;
+    font-weight: 600;
+}
+
+.get-create-patient-info-div div a {
     margin: 10px auto;
     display: inherit;
     height: 40px;
@@ -183,13 +260,49 @@ section.all-details .details-container div button {
     font-weight: 600;
     border-radius: 8px;
     border: none;
-    padding: 5px 10px;
+    padding: 10px;
+    width: 120px;
+    text-decoration: none;
+    text-align: center;
 }
 
+.get-create-patient-info-div div button,
+section.health-card-section div button,
+section.all-details .details-container div button {
+    margin: 10px auto;
+    height: 40px;
+    background-color: #AE081B;
+    color: #FCFCFC;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    min-width: 120px;
+}
+
+.get-create-patient-info-div div button:hover,
 section.health-card-section div button:hover,
 section.all-details .details-container div button:hover {
     background-color: #fdb813;
     color: #000;
+}
+
+section.patient-datewise-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0px;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+section.patient-datewise-details h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 section.cards {
@@ -340,31 +453,45 @@ header p {
     margin: 0px;
 }
 
-.all-patient-details .accordion {
+.patient-datewise-details .accordion {
     border-radius: 5px;
 }
 
-.all-patient-details .accordion-button:not(.collapsed) {
+.patient-datewise-details .accordion-flush .accordion-item .accordion-button.collapsed {
+    background-color: #c7c7c7;
+}
+
+.patient-datewise-details .accordion-flush .accordion-item .accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.patient-datewise-details .accordion-button:not(.collapsed) {
     background-color: #003175;
     color: #BFD3F8;
 }
 
-.all-patient-details .accordion-button:not(.collapsed)::after {
+.patient-datewise-details .accordion-button:not(.collapsed)::after {
     background-image: url('./arrow.svg');
 }
 
-.all-patient-details .accordion-item {
+.patient-datewise-details .accordion-item {
     border: 1px solid #e09d9d;
 }
 
-.all-patient-details .accordion-flush .accordion-item:first-child {
+.patient-datewise-details .accordion-flush .accordion-item:first-child {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
 
-.all-patient-details .accordion-flush .accordion-item:last-child {
+.patient-datewise-details .accordion-flush .accordion-item:last-child {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+
+.patient-datewise-details .accordion-body a {
+    margin-right: 40px;
+    margin-bottom: 20px;
 }
 
 section.footer {
@@ -388,3 +515,60 @@ section.footer {
   section.footer  li {
     font-size: 12px;
   }
+    
+    .card {
+      border-radius: 10px;
+      box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.3);
+      width: 500px;
+      height: 250px;
+      background-color: #ffffff;
+      padding: 10px 30px 40px;
+    }
+    
+    .card h3 {
+      font-size: 22px;
+      font-weight: 600;
+      
+    }
+    
+    .drop_box {
+      margin: 10px 0;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border: 3px dotted #a3a3a3;
+      border-radius: 5px;
+    }
+
+    .drop_box header {
+        text-align: center;
+    }
+    
+    .drop_box h4 {
+      font-size: 16px;
+      font-weight: 400;
+      color: #2e2e2e;
+    }
+    
+    .drop_box p {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      color: #a3a3a3;
+    }
+    
+    .form input {
+      margin: 10px 0;
+      width: 100%;
+      background-color: #e2e2e2;
+      border: none;
+      outline: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+    }
+
+    .get-create-patient-info-div .card {
+        width: 450px;
+    }

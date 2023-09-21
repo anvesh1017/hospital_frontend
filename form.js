@@ -95,12 +95,31 @@ $(document).ready(function () {
                           const city = (result.city !== '') ? result.city : '';
                           const state = (result.state !== '') ? result.state : '';
 
-
+                          localStorage.setItem('url', `http://localhost:8000/health-card-id/${result.health_card_id}`)
 
                           $('#patient-details-div').append(`
-                            <p>${result.firstname} ${result.lastname}</p>
-                            <p>${result.mobile}</p>
-                            <p>${addressOne}, ${city}, ${state}, ${result.pincode}</p>
+                            <table>
+                                    <tr>
+                                    <th>Name</th>
+                                    <td>:</td>
+                                    <td>${result.firstname} ${result.lastname}</td>
+                                </tr>
+                                <tr>
+                                    <th>Date of Birth</th>
+                                    <td>:</td>
+                                    <td>${result.dob}</td>
+                                </tr>
+                                <tr>
+                                    <th>Phone</th>
+                                    <td>:</td>
+                                    <td>${result.mobile}</td>
+                                </tr>
+                                <tr>
+                                    <th>Address</th>
+                                    <td>:</td>
+                                    <td>${addressOne}, ${city}, ${state}, ${result.pincode}</td>
+                                </tr>
+                                </table>
                         `);
                         $(form).addClass('hide');
                         $('#result-section').removeClass('hide');
@@ -134,7 +153,6 @@ $(document).ready(function () {
 
     
     $(document).on('click', '#resetForm', () => {
-       
         validator.resetForm();
     });
 
